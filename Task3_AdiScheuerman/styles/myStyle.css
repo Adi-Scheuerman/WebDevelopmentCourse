@@ -1,0 +1,132 @@
+body {
+    direction: rtl;
+    background-image: url("../images/cork-wallet.png");
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #380B61;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+    nav ul li {
+        display: inline-block;
+        float: right;
+    }
+
+        nav ul li a {
+            display: block;
+            background-color: #380B61;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            width: 120px;
+            height: 30px;
+            Padding-top: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-left: 2px double white;
+        }
+
+            nav ul li a:hover {
+                background-color: #E3CEF6;
+                color: #380B61;
+            }
+
+            nav ul li a:active {
+                background-color: #A9A9F5;
+            }
+
+            nav ul li a.selected {
+                background-color: #F5EFFB;
+                color: #4C0B5F;
+            }
+
+.box {
+    border: 1px solid #380B61;
+    border-radius: 15px 0px 0px 0px;
+    width: 650px;
+    background-color: #F5EFFB;
+    color: #210B61;
+    font-size: 17px;
+    margin-top: 70px;
+    height: 450px;
+    margin-bottom: 15px;
+    line-height: 20px;
+}
+
+    .box:hover {
+        border: 1px solid #380B61;
+        border-radius: 15px 0px 0px 0px;
+        width: 650px;
+        background-color: #A4A4A4;
+        box-shadow: 1px 1px 1px 1px #380B61;
+        color: #F5EFFB;
+        font-size: 17px;
+        height: 450px;
+        margin-bottom: 15px;
+        line-height: 20px;
+    }
+
+    .box h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #380B61;
+    }
+
+    .box h2, .box p {
+        margin: 20px;
+    }
+
+#box1 {
+    background-image: url("../images/family.jpg"), url("../images/hearts.png");
+    background-size: 520px 270px, 150px;
+    background-repeat: no-repeat;
+    background-position-x: 20%, 10%;
+    background-position-y: 90%, 7%;
+}
+
+#box2 {
+    background-image: url("../images/mom.png");
+    background-size: 270px;
+    background-repeat: no-repeat;
+    background-position-x: 2%;
+    background-position-y: 97%;
+}
+
+.hobby li {
+    margin-right: 40px;
+    list-style-image: url("../images/bullet4.png");
+    margin-left: 40px;
+}
+
+#box3 {
+    background-image: url("../images/me.jpeg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position-x: 2%;
+    background-position-y: 97%;
+}
+
+footer {
+    border-top: 3px groove #380B61;
+    font-size: 15px;
+    line-height: 20px;
+    color: #380B61;
+    display: block;
+}
+
+    footer h3 {
+        color: #380B61;
+        font-weight: bold;
+    }
