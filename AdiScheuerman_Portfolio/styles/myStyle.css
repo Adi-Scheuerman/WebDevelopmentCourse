@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-/*עיצוב כללי לאתר*/
+/*ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ«ֳ¬ֳ¬ֳ© ֳ¬ֳ ֳ÷ֳ¸*/
 body {
     direction: rtl;
     background-image: url('../images/background.jpg');
@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
 }
 
-/*הגדרות עיצוב לתפריט ניווט*/
+/*ֳ₪ֳ¢ֳ£ֳ¸ֳ¥ֳ÷ ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ¬ֳ÷ֳ´ֳ¸ֳ©ֳ¨ ֳ°ֳ©ֳ¥ֳ¥ֳ¨*/
 nav ul {
     list-style: none;
     padding-bottom: 45px;
@@ -30,7 +30,7 @@ nav ul {
 
         nav ul li a {
             display: block;
-            font-family: 'Gveret Levin AlefAlefAlef';
+            font-family: Gveret Levin AlefAlefAlef, ariel;
             color: #61D0BB;
             text-decoration: none;
             text-align: center;
@@ -62,7 +62,7 @@ nav ul {
     border-bottom: 3px dashed #61D0BB;
 }
 
-/*עיצוב לעמוד הבית*/
+/*ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ¬ֳ²ֳ®ֳ¥ֳ£ ֳ₪ֳ¡ֳ©ֳ÷*/
 #home {
     height: 548px;
     width: 959px;
@@ -74,7 +74,7 @@ audio {
     width: 274px;
 }
 
-/*הגדרות עיצוב לעמוד הדיוקן האישי*/
+/*ֳ₪ֳ¢ֳ£ֳ¸ֳ¥ֳ÷ ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ¬ֳ²ֳ®ֳ¥ֳ£ ֳ₪ֳ£ֳ©ֳ¥ֳ·ֳ¯ ֳ₪ֳ ֳ©ֳ¹ֳ©*/
 #portrait {
     background-image: url('../images/Portrait.jpg');
     background-size: 40%;
@@ -108,7 +108,7 @@ audio {
         padding-right: 5px;
     }
 
-/*הגדרות עיצוב לעמוד הצעקה*/
+/*ֳ₪ֳ¢ֳ£ֳ¸ֳ¥ֳ÷ ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ¬ֳ²ֳ®ֳ¥ֳ£ ֳ₪ֳ¶ֳ²ֳ·ֳ₪*/
 #scream h1 {
     display: inline-block;
     width: 118.5px;
@@ -156,7 +156,7 @@ audio {
 }
 
 
-/*הגדרות עיצוב לעמוד הפוסטר*/
+/*ֳ₪ֳ¢ֳ£ֳ¸ֳ¥ֳ÷ ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ¬ֳ²ֳ®ֳ¥ֳ£ ֳ₪ֳ´ֳ¥ֳ±ֳ¨ֳ¸*/
 #poster {
     background-image: url('../images/Poster.png');
     background-size: 40%;
@@ -190,7 +190,7 @@ audio {
         padding-top: 7px;
     }
 
-/*הגדרות עיצוב לעמוד צור קשר*/
+/*ֳ₪ֳ¢ֳ£ֳ¸ֳ¥ֳ÷ ֳ²ֳ©ֳ¶ֳ¥ֳ¡ ֳ¬ֳ²ֳ®ֳ¥ֳ£ ֳ¶ֳ¥ֳ¸ ֳ·ֳ¹ֳ¸*/
 #test form {
     width: 274px;
     height: 274px;
