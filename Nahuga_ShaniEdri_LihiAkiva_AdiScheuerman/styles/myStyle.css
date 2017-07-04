@@ -1,0 +1,886 @@
+body {
+    direction: rtl;
+    background-image: url('../images/NewBackground2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Assistant', sans-serif;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*עיצוב כפתור דלג לתוכן*/
+a.skip-main {
+    right: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+
+    a.skip-main:focus, a.skip-main:active {
+        color: #1267A7;
+        background-color: #FFFFFF;
+        right: auto;
+        width: 130px;
+        height: auto;
+        overflow: auto;
+        padding: 5px;
+        text-align: center;
+        font-size: 1.2em;
+        z-index: 999;
+        margin-right: -140px;
+    }
+
+/* תפריט ניווט עליון */
+#navtop {
+    background-color: white;
+    position: fixed; /*גורם לתפריט לרחף למעלה*/
+}
+
+    #navtop ul {
+        list-style: none;
+    }
+
+    #navtop > ul > li {
+        display: inline-block;
+        padding-right: 8.8px;
+    }
+
+        #navtop > ul > li > a {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            width: 88px;
+            height: 22px;
+            border-bottom: 3px solid white;
+        }
+
+
+/*  מעברים לתפריט ניווט עליון */
+
+/*  הגדרת הובר לכל כפתור למעט הלוגו */
+#motor:hover, #emotional:hover, #cognition:hover, #tools:hover, #list:hover {
+    background-color: #FCE2B6;
+    background-size: 60px;
+    border-bottom: 3px solid #12677F;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/*צביעת הרקע של הכפתור הראשי בעת הובר על התתי תפריט*/
+#navtop ul li:hover #motor, #navtop ul li:hover #emotional, #navtop ul li:hover #cognition {
+    background-color: #FCE2B6;
+    border-bottom: 3px solid #12677F;
+}
+
+/*כיצד יראה הכפתור כאשר אנו בתוך הדף*/
+.selected {
+    background-color: #FCE2B6;
+    background-size: 60px;
+    border-bottom: 3px solid #12677F !important;
+}
+
+/* תתי תפריט מוסתרים ונראה  אותם רק באמצעות הובר על הכפתור המתאים*/
+#navtop li ul {
+    position: absolute;
+    margin-top: 90px;
+    margin-right: -15px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    display: none;
+}
+
+/*כיצד נראה תת תפריט בעת הובר על הכפתור הראשי*/
+#navtop ul li:hover ul {
+    display: block;
+    margin-top: 90px;
+    margin-right: -15px;
+}
+
+/*כיצד נראה תת תפריט*/
+#navtop ul li ul li a {
+    background-color: white;
+    border-bottom: 1px solid #157895;
+    width: 120px;
+    padding-top: 15px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #12677F;
+}
+    /*כיצד נראה תת תפריט בעת הובר על התת תפריט*/
+    #navtop ul li ul li a:hover {
+        background-color: #FCE2B6;
+        text-decoration: underline;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+/*סימן אין כניסה לדפים שלא פותחו*/
+.notallowed {
+    cursor: not-allowed;
+}
+
+/*הגדרות הלוגו בתפריט הניווט*/
+#navtop #logo {
+    color: #C04250;
+    margin-right: 35px;
+    width: 109px;
+    height: 35px;
+    margin-left: 300px;
+}
+
+#hatasama {
+    position: absolute !important;
+    margin-right: 98px;
+    margin-top: -85px;
+    padding-top: 50px;
+}
+
+#motor, #emotional, #cognition, #tools, #list {
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #12677F;
+    padding-top: 65px;
+    float: left;
+}
+
+/*סידור הגודל של הכפתורים האלו, נראים קטנים יותר מהשאר*/
+#cognition, #motor {
+    background-size: 56px;
+}
+
+#motor {
+    background-image: url('../images/ball.svg');
+}
+
+#emotional {
+    background-image: url('../images/heart.svg');
+}
+
+#cognition {
+    background-image: url('../images/chess.svg');
+}
+
+#tools {
+    background-image: url('../images/tools.svg');
+}
+
+#list {
+    background-image: url('../images/list.svg');
+}
+
+/* עיצוב פרורי לחם */
+#breadcrumb {
+    margin-top: 140px;
+}
+
+ul.breadcrumb {
+    padding-right: 40px;
+    list-style: none;
+}
+
+    /* Display list items side by side */
+    ul.breadcrumb li {
+        display: inline;
+    }
+
+        /* Add a slash symbol (/) before/behind each list item */
+        ul.breadcrumb li + li:before {
+            padding: 8px;
+            color: #157895;
+            content: "/";
+        }
+
+        /* Add a color to all links inside the list */
+        ul.breadcrumb li a {
+            color: #157895;
+            text-decoration: none;
+        }
+
+            /* Add a color on mouse-over */
+            ul.breadcrumb li a:hover {
+                color: #157895;
+                text-decoration: underline;
+            }
+
+/*עיצוב הפוטר*/
+footer {
+    border-top: 3px solid #C04250;
+    background-color: white;
+    list-style: none;
+    display: inline-block;
+    color: #157895;
+    text-align: center;
+    width: 960px;
+    height: 22px;
+}
+
+    footer p {
+        float: right;
+        padding-top: 50px;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #157895;
+        float: right;
+        width: 90px;
+        height: 25px;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 50px;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+            background-color: #FCE2B6;
+        }
+
+    footer ul {
+        margin-right: 690px;
+    }
+
+#contactus {
+    background-image: url('../images/footer/contact.svg');
+}
+
+#aboutus {
+    background-image: url('../images/footer/about.svg');
+}
+
+#mapsite {
+    background-image: url('../images/footer/map.svg');
+}
+
+/*עיצוב כללי לכותרת ראשונה מבחינת צבעים וגודל פונט*/
+h1 {
+    color: #157895;
+    font-size: 38pt;
+    font-weight: 700;
+    padding-top: 50px;
+    padding-right: 40px;
+    background-image: url('../images/line.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+/*עיצוב כללי לכותרת שניה מבחינת צבע וגודל פונט*/
+h2 {
+    color: #C04250;
+    font-weight: 700;
+    font-size: 22pt;
+}
+/*עיצוב כללי כותרת שלישית*/
+
+h3 {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 0 !important;
+}
+
+h4 {
+    padding-top: 20px;
+    color: #12677F;
+    font-size: 18pt;
+}
+
+/*עיצוב דף בית*/
+/*עיצוב שונה לכותרת ראשית בעמוד הבית*/
+#homepagetitle {
+    font-size: 55pt;
+    width: 420px;
+    padding-top: 130px;
+}
+
+#homepagetop {
+    background-color: white;
+    display: inline-block;
+    height: 500px;
+    padding-bottom: 60px;
+    padding-top: 40px;
+}
+
+#homepageright {
+    width: 500px;
+    float: right;
+}
+
+#homepagetext {
+    padding-top: 20px;
+    font-size: 18pt;
+    color: #656565;
+    padding-right: 60px;
+    line-height: 30px;
+}
+
+    #homepagetext > span > a {
+        color: #157895;
+        text-decoration: underline;
+    }
+
+#kids {
+    width: 460px;
+    height: 500px;
+    padding-top: 75px;
+    background-image: url('../images/kids.svg');
+    background-repeat: no-repeat;
+    background-size: 67%;
+    background-position: center;
+    float: left;
+}
+
+    #kids > p {
+        padding-right: 120px;
+        padding-top: 450px;
+        width: 264px;
+        text-align: left;
+        color: #656565;
+    }
+
+#homepagebottom {
+    width: 900px;
+    height: 320px;
+    background-image: url('../images/NewBackground2.jpg');
+    background-size: 380%;
+    padding-right: 60px;
+    display: inline-block;
+}
+
+#homepagetools, #monthlyclass, #recommended {
+    background: rgba(255, 255, 255, .7);
+    width: 240px;
+    height: 280px;
+    float: right;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 200%;
+    -moz-box-shadow: inset 0 0 10px #ACC1BF;
+    -webkit-box-shadow: inset 0 0 10px #ACC1BF;
+    box-shadow: inset 0 0 10px #ACC1BF;
+}
+
+    #monthlyclass > a {
+        text-decoration: none;
+    }
+
+/*כותרת שניה לעמוד הבית בתוך הריבועים למטה */
+#homepagebottom h2 {
+    padding-top: 140px;
+}
+
+#homepagebottom p {
+    padding: 14px 16px 20px 11px;
+    font-size: 14pt;
+    color: #656565;
+    text-align: right;
+}
+
+#homepagetools {
+    background-image: url('../images/spite/spritetool.svg');
+}
+
+#monthlyclass {
+    background-image: url('../images/spite/spritemedal.svg');
+}
+
+#recommended {
+    background-image: url('../images/spite/spriterecommended.svg');
+}
+
+    #homepagetools:hover, #monthlyclass:hover, #recommended:hover {
+        background-position: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: scale(1.1);
+    }
+
+/*עיצוב כללי לכל הדפים הפנימיים רקע לבן כותרות וטקסט*/
+#innerpage {
+    background-color: white;
+    display: inline-block;
+    width: 960px;
+}
+
+    #innerpage h2 {
+        margin-top: 35px;
+        margin-right: 40px;
+    }
+
+.innertext, h3 {
+    font-size: 13pt;
+    line-height: 25px;
+    width: 800px;
+    margin-bottom: 15px;
+    margin-right: 40px;
+    color: #656565;
+}
+
+/*עיצוב לדף פיתוח מוטורי*/
+#motortitle {
+    width: 270px;
+}
+
+#banner {
+    height: 100px;
+    background-image: url("../images/KidsBanner.jpg");
+    width: 940px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+/*עיצוב לריבועים למטה*/
+#finemotor, #grossmotor {
+    background-color: #FCE2B6;
+    width: 300px;
+    height: 280px;
+    float: right;
+    margin-right: 115px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+    background-position: right;
+    -moz-box-shadow: inset 0 0 10px #ACC1BF;
+    -webkit-box-shadow: inset 0 0 10px #ACC1BF;
+    box-shadow: inset 0 0 10px #ACC1BF;
+}
+
+    #grossmotor > a, #finemotor > a {
+        text-decoration: none;
+    }
+
+        #grossmotor > a > h4, #finemotor > a > h4 {
+            text-align: center;
+        }
+
+        #grossmotor > a > p, #finemotor > a > p {
+            padding-top: 20px;
+            font-size: 14pt;
+            text-align: right;
+            line-height: 25px;
+            width: 180px;
+            padding-right: 15px;
+            padding-left: 105px;
+            padding-bottom: 40px;
+            color: #656565;
+        }
+
+#grossmotor {
+    background-image: url('../images/spite/grossmotorsprite-01.svg');
+}
+
+#finemotor {
+    background-image: url('../images/spite/finemotorsprite-01.svg');
+}
+
+    #finemotor:hover, #grossmotor:hover {
+        background-position: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+/*עיצוב לדף מוטוריקה גסה*/
+#GrossMotortitle {
+    width: 300px;
+}
+#pros {
+    padding-bottom:40px;
+     }
+
+#grossmotorgirl {
+    background-image: url("../images/GrossMotor/girl.jpg");
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 350px;
+    background-size: contain;
+    float: left;
+    margin-top: -100px;
+    margin-left: 50px;
+}
+
+#gain li {
+    width: 200px;
+    height: 25px;
+    display: inline-block;
+    padding-right: 30px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.checkmark {
+    background-image: url("../images/GrossMotor/check-mark.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin-right: -50px;
+    margin-bottom: -30px;
+}
+
+#recommendation {
+    background-color: #EAF4F6;
+    width: 960px;
+    height: 350px;
+    padding-top: 1px;
+    margin-top: 20px;
+}
+
+#momvideo1 {
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+#momvideo2 {
+    margin-right: 500px;
+    margin-top: -220px;
+}
+
+#ninesuggestion {
+    margin-top: 20px;
+}
+
+    #ninesuggestion li {
+        width: 290px;
+        height: 215px;
+        background-color: #EAF4F6;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        font-size: 18px;
+        text-decoration: none;
+        padding-right: 10px;
+        padding-top: 10px;
+        font-weight: bolder;
+        border: 3px solid white;
+    }
+
+    #ninesuggestion a {
+        text-decoration: none;
+        color: #12677F;
+    }
+
+#Football, #basketball, #tennis, #swimming, #dance {
+    width: 280px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 280px;
+    margin-top: 5px;
+}
+
+#Football {
+    background-image: url("../images/GrossMotor/football.jpg");
+}
+
+#basketball {
+    background-image: url("../images/GrossMotor/basketball.jpg");
+}
+
+
+#ninesuggestion li:hover {
+    border: 3px solid #157895;
+    background-color: #FCE2B6;
+}
+
+#tennis {
+    background-image: url("../images/GrossMotor/tennic.jpg");
+}
+
+
+#swimming {
+    background-image: url("../images/GrossMotor/swimming.jpg");
+}
+
+#dance {
+    background-image: url("../images/GrossMotor/dancing.jpg");
+}
+
+#martialart, #athletics, #floorexercises {
+    width: 280px;
+    height: 185px;
+    background-repeat: no-repeat;
+    background-size: 280px;
+    margin-top: 5px;
+}
+
+#martialart {
+    background-image: url("../images/GrossMotor/karate.jpg");
+}
+
+#acrobatics {
+    background-image: url("../images/GrossMotor/acrobatics.jpg");
+    width: 280px;
+    height: 185px;
+    background-repeat: no-repeat;
+    background-size: 280px;
+    margin-top: 5px;
+    background-position-y: 20%;
+}
+
+#athletics {
+    background-image: url("../images/GrossMotor/athletics.jpg");
+}
+
+#floorexercises {
+    background-image: url('../images/GrossMotor/gymnastics.jpg');
+}
+
+
+/*עיצוב לדף חוג כדורגל*/
+
+#footballtitle {
+    width: 230px;
+}
+
+
+
+#unisex, #strong, #team, #shake, #heart, #control {
+    height: 90px;
+    width: 90px;
+    -webkit-border-radius: 300px 300px 300px 300px;
+    border-radius: 300px 300px 300px 300px;
+    background-repeat: no-repeat;
+    background-size:65px;
+    margin-top: 50px;
+    background-position: center;
+    margin-right: 50px;
+    margin-left:290px;
+    background-color: #EAF4F6;
+    display:inline-block;
+}
+
+
+
+    #unisex > h3, #strong > h3, #team > h3, #shake > h3, #control > h3, #heart > h3 {
+        padding-right: 60px;
+        width: 420px;  
+    }
+
+    #unisex > p, #strong > p, #team > p, #shake > p, #control > p, #heart > p {
+        padding-right: 60px;
+        width: 266px;
+    }
+
+#unisex {
+    background-image: url('../images/soccer/unisex.png');
+}
+
+#strong {
+    background-image: url('../images/soccer/arm.png');
+}
+
+#team {
+    background-image: url('../images/soccer/teamwork.png');
+}
+
+#shake {
+    background-image: url('../images/soccer/shake-hands.png');
+}
+
+#control {
+    background-image: url('../images/soccer/ball-conrol.png');
+}
+
+#heart {
+    background-image: url('../images/soccer/heart.png');
+}
+
+
+#soccerfoto {
+    background-image: url('../images/kidfootball-01.jpg');
+    width: 960px;
+   background-position-y:70px;
+    height: 351px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 40px
+}
+
+    #soccerfoto > h3 {
+        margin-top: 40px;
+        padding-top: 370px;
+        margin-right: 360px;
+        height: 40px;
+    }
+
+
+/*#Creative {  float: left; width:900px; height:40px; padding-left:100px;    }*/
+
+
+/*****  
+
+/*עיצוב לדף צור קשר*/
+#contacttitle {
+    width: 375px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #656569;
+}
+
+input[type ='text'], select, textarea {
+    display: block;
+    margin-bottom: 20px;
+    padding: 6px 12px;
+    font-family: Assistant;
+    font-size: 14pt;
+    width: 320px;
+}
+
+input[type ='submit'] {
+    margin-top: 10px;
+}
+
+#userSelection {
+    width: 348px;
+}
+
+input#send {
+    background-image: url('../images/sendicon-01.svg');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position-x: 5px;
+    background-position-y: 4px;
+    margin-right: 217px;
+    height: 50px;
+    width: 130px;
+    text-align: right;
+    font-family: Assistant;
+    font-size: 14pt;
+    color: white;
+    background-color: #157895;
+    border: 1px solid #157895;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    input#send:hover {
+        box-shadow: 5px 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 2px solid #C04250;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        background-position-x: -55px;
+        background-position-y: 4px;
+    }
+
+.contactpage {
+    background-image: url('../images/boy.png');
+    background-repeat: no-repeat;
+    background-size: 220px;
+    background-position-x: 65px;
+    background-position-y: 265px;
+    /*padding-right: 50px;*/
+}
+
+/* עיצוב לדף אודות*/
+#abouttitle {
+    width: 570px;
+}
+
+#courses {
+    margin-right: 70px;
+}
+
+#pages {
+    margin-right: 70px;
+}
+
+#hit {
+    /*background-image:url("../images/HITlogo.png");
+    background-repeat:no-repeat;
+    height:200px;
+    width:150px;
+    background-size:cover;*/
+    margin-top: 45px;
+    margin-right: 400px;
+    text-align: center;
+    width: 180px;
+}
+
+/******/
+
+/*עיצוב לדף מפת אתר*/
+#sitetitle {
+    width: 230px;
+}
+
+
+.site > ul > li > ul {
+    padding-right: 30px;
+}
+
+.site {
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+    background-image: url(../images/airplane.png);
+    background-repeat: no-repeat;
+    background-position-y: 425px;
+    background-size: 25%;
+    background-position-x: 88px;
+}
+
+    .site > ul {
+        margin-top: 20px;
+        margin-right: 60px;
+        margin-bottom: 137px;
+    }
+
+
+
+
+
+/*עיצוב חוג החודש אומנויות לחימה*/
+#martialarttitale {
+    width: 330px;
+}
+
+#martialmotor {
+    background-image: url('../images/ball.svg');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    height: 50px;
+}
+
+#martialemotional {
+    background-image: url('../images/heart.svg');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    height: 50px;
+}
+
+#martialcognition {
+    background-image: url('../images/chess.svg');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    height: 50px;
+    margin-right: 500px;
+}
+
+#martialh4 {
+    text-align: right;
+    margin-right: 40px;
+}
+
+ol li {
+    margin-right: 40px;
+}
