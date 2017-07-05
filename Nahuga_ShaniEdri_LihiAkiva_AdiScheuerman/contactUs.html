@@ -1,0 +1,133 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <link rel="icon" href="images/Favicon.png">
+    <meta charset="utf-8" />
+    <title>נחוגה - צור קשר</title>
+    <meta name="description" content="צור קשר עם נחוגה אתר המרכז חוגים לילדים" />
+    <meta name="keywords" content="מה, פיתוח, מוטורי, קוגניטיבי, רגשי, מוטוריקה עדינה, מוטוריקה גסה, חוגים לילדים, הפרעות קשב, חרדה, מיומנויות חברתיות" />
+    <meta name="author" content="Nahuga Team" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="https://webdevelopmentcourse.github.io/contactUs/WebDevelopmentCourse/jScripts/contactUs.js" type="text/javascript"></script>
+
+</head>
+<body onload="tab_nav()">
+    <div id="container">
+        <a class="skip-main" href="#main">דלג לתוכן</a>
+        <header>
+            <nav id="navtop">
+                <ul>
+                    <li> <a href="index.html" id="logo" alt="נחוגה"> <img src="images/logonotext1-01.png" width="111" height="76" /><p id="hatasama">  העצמה חוגית</p> </a> </li>
+                    <li>
+                        <a href="MotorPage.html" id="motor">  פיתוח מוטורי </a>
+                        <ul>
+                            <li> <a href="GrossMotor.html"> מוטוריקה גסה </a> </li>
+                            <li> <a href="#" class="notallowed"> מוטוריקה עדינה </a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="emotional" class="notallowed"> פיתוח רגשי </a>
+                        <ul>
+                            <li> <a href="#" class="notallowed"> בטחון עצמי </a> </li>
+                            <li> <a href="#" class="notallowed">  מיומנות חברתית </a> </li>
+                            <li> <a href="#" class="notallowed">  חרדה </a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="cognition" class="notallowed"> פיתוח מחשבתי </a>
+                        <ul>
+                            <li> <a href="#" class="notallowed"> זכרון חזותי </a> </li>
+                            <li> <a href="#" class="notallowed"> הפרעות קשב וריכוז </a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="list" class="notallowed"> רשימת חוגים </a>
+                        <ul>
+                            <li> <a href="#" class="notallowed"> כל החוגים </a> </li>
+                            <li> <a href="#" class="notallowed"> חוג החודש </a> </li>
+                        </ul>
+                    </li>
+                    <li> <a href="#" id="tools" class="notallowed"> כלים </a> </li>
+                </ul>
+            </nav>
+        </header>
+        <article id="innerpage" class="contactpage">
+            <nav id="breadcrumb">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li>צור קשר</li>
+                </ul>
+            </nav>
+            <div id="main">
+                <h1 id="contacttitle">
+                    נשמח לשמוע מכם
+                </h1>
+                <h2>
+                    טופס יצירת קשר
+                </h2>
+                <form class="innertext">
+                    <input type="hidden" id="myEmail" name="name" value="adital12@gmail.com">
+                    <label for="name">
+                        שם מלא:
+                        <input type="text" id="name" placeholder="הזן את שמך" />
+                    </label>
+                    <label for="mail">
+                        דוא"ל:
+                        <input type="text" id="mail" placeholder="דואר אלקטרוני" />
+                    </label>
+                    <label for="userSelection">
+                        מהו תחום החוג בו התעניינת:
+                        <select id="userSelection">
+                            <option value="1" selected> בחר תחום </option>
+                            <option value="2"> מוטוריקה עדינה </option>
+                            <option value="3"> מוטוריקה גסה </option>
+                            <option value="4"> זכרון חזותי </option>
+                            <option value="5"> הפרעות קשב וריכוז </option>
+                            <option value="6"> בטחון עצמי </option>
+                            <option value="7"> מיומנות חברתית </option>
+                            <option value="8"> חרדה </option>
+                        </select>
+                    </label>
+                    <label for="find">
+                        <input type="radio" id="find" /> מצאתי את מבוקשי באתר
+                    </label>
+                    <label for="didntFind">
+                        <input type="radio" id="didntFind" /> לא מצאתי את מבוקשי באתר
+                    </label>
+                    <label for="userMsg">
+                        שתף אותנו בחוגים שאפשר להוסיף:
+                        <textarea id="userMsg"></textarea>
+                    </label>
+                    <label for="keepMePosted">
+                        <input type="checkbox" id="keepMePosted" checked /> עדכנו אותי בבקשה על חוגים חדשים שמתווספים
+                    </label>
+
+                    <input type="submit" id="send" value="שלח">
+                  
+                    <div id="feedback"></div>
+                    <br />
+                </form>
+                </div>
+</article>
+
+        <footer>
+            <p class="footertext"> ©כל הזכויות שמורות לצוות נחוגה </p>
+            <nav>
+                <ul>
+                    <li> <a href="contactUs.html" id="contactus" class="selected"> צור קשר </a> </li>
+                    <li> <a href="about.html" id="aboutus"> אודות </a> </li>
+                    <li> <a href="siteMap.html" id="mapsite"> מפת האתר </a> </li>
+                </ul>
+            </nav>
+        </footer>
+</div>
+</body>
+</html>
